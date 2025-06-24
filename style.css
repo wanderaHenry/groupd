@@ -1,0 +1,125 @@
+/* style.css */
+:root {
+  --bg-light: #f0f0f0;
+  --bg-dark: #1E1E1E;
+  --text-light: #1E1E1E;
+  --text-dark: #ffffff;
+  --card-light: #ffffff;
+  --card-dark: #2C2C2C;
+  --accent: #007bff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme='light'] {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.app {
+  max-width: 500px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  padding: 0.5rem;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.weather-card {
+  background-color: var(--card-dark);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  display: none;
+  transition: background 0.3s ease;
+}
+
+body[data-theme='light'] .weather-card {
+  background-color: var(--card-light);
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+footer {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 1rem auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 0.5rem;
+  }
+
+  .nav-btn {
+    font-size: 1.2rem;
+  }
+}

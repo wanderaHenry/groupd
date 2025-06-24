@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Weather</h1>
+      <button id="theme-toggle" title="Toggle Theme"></button>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="city-input" placeholder="Search for a city...">
+      <button id="search-btn" title="Search">
+        <img src="search-icon.svg" alt="Search">
+      </button>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+    <p class="error" id="error-msg"></p>
+
+    <div class="weather-card" id="weather-card">
+      <!-- Weather details will appear here -->
+    </div>
+
+    <footer>
+      <nav>
+        <button class="nav-btn">🏠</button>
+        <button class="nav-btn">⚙️</button>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

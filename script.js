@@ -1,5 +1,5 @@
 // script.js
-const apiKey = "7947387b8c052c0829ee40bbf089aa33"; // Replace with your OpenWeatherMap API key
+const apiKey = "7947387b8c052c0829ee40bbf089aa33"; //my api key
 const cityInput = document.getElementById("city-input");
 const searchBtn = document.getElementById("search-btn");
 const loader = document.getElementById("loader");
@@ -22,7 +22,7 @@ searchBtn.addEventListener("click", () => {
 themeToggle.addEventListener("click", () => {
   const html = document.documentElement;
   const current = html.getAttribute("data-theme");
-  html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+  html.setAttribute("data-theme", current === "light" ? "dark" : "light");
 });
 
 function showLoader() {
